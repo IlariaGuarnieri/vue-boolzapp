@@ -3,7 +3,6 @@ const {createApp} =Vue
 createApp({
   data() {
     return {
-      chatAttiva: 0, 
       // array oggetti
       contacts: [
         {
@@ -176,7 +175,7 @@ createApp({
             ],
         }
       ],
-     
+    
       // 0 è il primo indice della prima chat
       utenteAttivo:0,
 
