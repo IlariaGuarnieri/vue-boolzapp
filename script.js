@@ -3,8 +3,7 @@ const {createApp} =Vue
 createApp({
   data() {
     return {
-      activeContact : 'ciao',
-      counterChat: 0,
+      chatAttiva: 0, 
       // array oggetti
       contacts: [
         {
@@ -177,20 +176,25 @@ createApp({
             ],
         }
       ],
-      contactCounter:0
+     
+      // 0 è il primo indice della prima chat
+      utenteAttivo:0,
+
     }
   },
 
   // Impostare l'indice del contatto selezionato
   methods:{
-    chat(index){
-    this.contactCounter = index
+  attivareUtente(index){
+    this.utenteAttivo = index;
+    console.log('cliccato')
   },
+
 
 
   mounted() {
     // output dei contatti nella console quando l'app è montata
-    console.log(this.contacts)
+    // console.log(this.contacts)
   },
 }
 }).mount('#app')

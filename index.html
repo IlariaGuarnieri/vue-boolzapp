@@ -66,7 +66,7 @@
           <div 
           v-for="(contact,index) in contacts"
           class="contatto d-flex"
-          @click="chat(index),console.log(contactCounter)"
+          @click="attivareUtente(index)"
           >
             <div class="photo">
               <img 
@@ -99,12 +99,12 @@
             </div>
           </div>
         </div>
-<!-- messaggi CHAT GRANDE -->
+  <!-- messaggi CHAT GRANDE -->
         <div class="content-messages">
 
-          <!-- fare poi il v-for per far vedere tutti i messaggi -->
-          <div  class="message-sent">
-            <p>{{ contacts[0].messages[0].message }}</p>
+        
+          <div class="message-sent">
+            <p>{{ contacts[utenteAttivo].messages[0].message }}</p>
           </div>
 
 
