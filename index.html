@@ -21,7 +21,7 @@
 
   <title>boolzap</title>
 </head>
-<body>
+<body id="app">
   <div class="main-wrapper d-flex justify-center align-center">
     <div class="main-container d-flex">
       <aside class="">
@@ -62,75 +62,19 @@
 
         <div class="users">
 
-          <div class="contatto d-flex">
+        <!-- contatto singolo-->
+          <div 
+          @click="getIdChat(index), console.log(contactCounter)"
+          v-for="(contact,index) in contacts"
+          class="contatto d-flex">
             <div class="photo">
-              <img src="img/avatar_2.jpg" alt="avatar-io">
+              <img :src="contacts.avatar" alt="avatar-foto">
             </div>
             <div class="name-user">
-              <p v-for="contact in contacts"><strong>{{contacts.name}}</strong></p>
-              <p id="font-xs">Lorem ipsum dolor sit amet</p>
+                  <span><strong>{{contact.name}}</strong></span>
+                  <p id="font-xs">{{contact.messages[contact.messages.length-1].message}}</p>
             </div>
           </div>
-          
-          <!-- <div class="contatto d-flex">
-            <div class="photo">
-              <img src="img/avatar_3.jpg" alt="avatar-io">
-            </div>
-            <div class="name-user">
-              <p><strong>Samuele</strong></p>
-              <p id="font-xs">Lorem ipsum dolor sit amet</p>
-            </div>
-          </div>
-
-          <div class="contatto d-flex">
-            <div class="photo">
-              <img src="img/avatar_4.jpg" alt="avatar-io">
-            </div>
-            <div class="name-user">
-              <p><strong>Alessandro B.</strong></p>
-              <p id="font-xs">Lorem ipsum dolor sit amet</p>
-            </div>
-          </div>
-
-          <div class="contatto d-flex">
-            <div class="photo">
-              <img src="img/avatar_5.jpg" alt="avatar-io">
-            </div>
-            <div class="name-user">
-              <p><strong>Alessandro L.</strong></p>
-              <p id="font-xs">Lorem ipsum dolor sit amet</p>
-            </div>
-          </div>
-
-          <div class="contatto d-flex">
-            <div class="photo">
-              <img src="img/avatar_6.jpg" alt="avatar-io">
-            </div>
-            <div class="name-user">
-              <p><strong>Claudia</strong></p>
-              <p id="font-xs">Lorem ipsum dolor sit amet</p>
-            </div>
-          </div>
-
-          <div class="contatto d-flex">
-            <div class="photo">
-              <img src="img/avatar_7.jpg" alt="avatar-io">
-            </div>
-            <div class="name-user">
-              <p><strong>Federico</strong></p>
-              <p id="font-xs">Lorem ipsum dolor sit amet</p>
-            </div>
-          </div>
-
-          <div class="contatto d-flex">
-            <div class="photo">
-              <img src="img/avatar_8.jpg" alt="avatar-io">
-            </div>
-            <div class="name-user">
-              <p><strong>Davide</strong></p>
-              <p id="font-xs">Lorem ipsum dolor sit amet</p>
-            </div>
-          </div> -->
 
         </div>
       </aside>

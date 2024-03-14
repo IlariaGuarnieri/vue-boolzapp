@@ -21,3 +21,10 @@ Si possono trascurare le scrollbar verticali, sia nel pannello dei messaggi, che
 I pulsanti e le icone possono non funzionare (a parte l’invio del messaggio)
 Per gestire le date, può essere utile la libreria Luxon
 La struttura dell’array dei contatti potrebbe avere questa forma:
+
+
+1. dato l' array di oggetti con nomi, foto e messaggi, usare un v-for nei contatti preimpostati in passato per renderli dinamici e stampare al loro interno foto e nome
+2. creare un altro array di oggetti con i messaggi e poi ciclali dentro la zona chat
+3. con il @click sul contatto si apre la chat
+4. input (testo) --> v-modelper poter inserire parole dinamicamente
+
