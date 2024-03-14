@@ -102,9 +102,11 @@
 <!-- messaggi CHAT GRANDE -->
         <div class="content-messages">
 
-          <div v-for=" message in contacts" class="message-sent">
-            <p>{{ cia0 }}</p>
+          <!-- fare poi il v-for per far vedere tutti i messaggi -->
+          <div  class="message-sent">
+            <p>{{ contacts[0].messages[0].message }}</p>
           </div>
+
 
           <div class="message-received">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cumque voluptatibus expedita ratione officiis deleniti quasi eius veniam veritatis voluptate! Nihil cupiditate molestias nobis quidem excepturi </p>

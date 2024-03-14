@@ -3,7 +3,8 @@ const {createApp} =Vue
 createApp({
   data() {
     return {
-      activeContatc :
+      activeContact : 'ciao',
+      counterChat: 0,
       // array oggetti
       contacts: [
         {
@@ -189,7 +190,7 @@ createApp({
 
   mounted() {
     // output dei contatti nella console quando l'app è montata
-
+    console.log(this.contacts)
   },
 }
 }).mount('#app')
