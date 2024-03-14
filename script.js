@@ -31,7 +31,7 @@ createApp({
 
         {
             name: 'Fabio',
-            avatar: './img/avatar_2.jpg',
+            avatar: 'img/avatar_2.jpg',
             visible: true,
             messages: [
                 {
@@ -54,7 +54,7 @@ createApp({
 
         {
             name: 'Samuele',
-            avatar: './img/avatar_3.jpg',
+            avatar: 'img/avatar_3.jpg',
             visible: true,
             messages: [
                 {

@@ -66,12 +66,16 @@
           <div 
           @click="getIdChat(index), console.log(contactCounter)"
           v-for="(contact,index) in contacts"
-          class="contatto d-flex">
+          class="contatto d-flex"
+          >
             <div class="photo">
-              <img :src="contacts.avatar" alt="avatar-foto">
+              <img 
+              :src="contact.avatar" alt="avatar"
+              >
             </div>
             <div class="name-user">
                   <span><strong>{{contact.name}}</strong></span>
+                  <!-- stampo anteprima dei messaggi chat -->
                   <p id="font-xs">{{contact.messages[contact.messages.length-1].message}}</p>
             </div>
           </div>
