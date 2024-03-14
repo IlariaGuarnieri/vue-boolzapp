@@ -3,7 +3,7 @@ const {createApp} =Vue
 createApp({
   data() {
     return {
-      // creo oggetti
+      // array oggetti
       contacts: [
         {
             name: 'Michele',
@@ -188,7 +188,7 @@ createApp({
 
   mounted() {
     // output dei contatti nella console quando l'app è montata
-    console.log(this.contacts, 'ciao');
+
   },
 }
 }).mount('#app')
