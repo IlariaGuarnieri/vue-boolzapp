@@ -179,13 +179,15 @@ createApp({
     }
   },
 
+  // Impostare l'indice del contatto selezionato
   methods:{
-    getIdChat(index){
+    chat(index){
     this.contactCounter = index
   },
 
 
   mounted() {
+    // output dei contatti nella console quando l'app è montata
     console.log(this.contacts, 'ciao');
   },
 }

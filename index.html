@@ -62,9 +62,8 @@
 
         <div class="users">
 
-        <!-- contatto singolo-->
+        <!-- chat singola-->
           <div 
-          @click="getIdChat(index), console.log(contactCounter)"
           v-for="(contact,index) in contacts"
           class="contatto d-flex"
           >
@@ -76,6 +75,7 @@
             <div class="name-user">
                   <span><strong>{{contact.name}}</strong></span>
                   <!-- stampo anteprima dei messaggi chat -->
+                  <!-- con [contact.messages.length-1].message mi viene restituito il testo dell'ultimo messaggio del contatto preso in considerazione -->
                   <p id="font-xs">{{contact.messages[contact.messages.length-1].message}}</p>
             </div>
           </div>
@@ -98,14 +98,19 @@
             </div>
           </div>
         </div>
+<!-- messaggi CHAT GRANDE -->
         <div class="content-messages">
-          <div class="message-sent">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cumque voluptatibus expedita ratione officiis deleniti quasi eius veniam veritatis voluptate! Nihil cupiditate molestias nobis quidem excepturi </p>
+
+          <div v-for="" class="message-sent">
+            <p>{{}}</p>
           </div>
+
           <div class="message-received">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cumque voluptatibus expedita ratione officiis deleniti quasi eius veniam veritatis voluptate! Nihil cupiditate molestias nobis quidem excepturi </p>
           </div>
+
         </div>
+
         <div class="input-message">
           <i class="fa-regular fa-face-smile"></i>
           <input type="text" placeholder="Scrivi un messaggio">
