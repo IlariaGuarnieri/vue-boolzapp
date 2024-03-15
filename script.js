@@ -175,10 +175,8 @@ createApp({
             ],
         }
     ],
-    
       // 0 è il primo indice della prima chat
         utenteAttivo:0,
-
     }
     },
 
@@ -188,14 +186,12 @@ createApp({
     this.utenteAttivo = index;
     console.log('cliccato')
   },
+},
 
+computed:{
 
-
-  mounted() {
-    // output dei contatti nella console quando l'app è montata
-    // console.log(this.contacts)
-  },
 }
+
 }).mount('#app')
 
 

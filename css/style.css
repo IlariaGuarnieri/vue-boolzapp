@@ -255,6 +255,10 @@ aside .users{
   margin-top: 15px;
 }
 
+.active{
+  border-bottom-color: transparent;
+  background-color: #E9EBEB;
+}
 /* input scrivi un messaggio */
 
 .input-message{

@@ -66,6 +66,7 @@
           <div 
           v-for="(contact,index) in contacts"
           class="contatto d-flex"
+          :class="{'active':index === utenteAttivo}"
           @click="attivareUtente(index)"
           >
             <div class="photo">
@@ -107,10 +108,12 @@
           class="message sent"
           >
             <p>{{ message.message }}</p>
+            <p class="message-time" >00/00/00 00:00:00</p>
           </div>
 
           <div class="message received">
             <p>Lorem ipsum dolor si</p>
+            <p class="message-time" >00/00/00 00:00:00</p>
           </div>
 
         </div>
