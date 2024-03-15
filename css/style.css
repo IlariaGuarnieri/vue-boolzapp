@@ -232,27 +232,27 @@ aside .users{
 }
 
 /* chat grandi destra */
-.message-sent{
-    max-width: 55%;
-    min-height: 130px ;
-    background-color: #D5F9BA ;
-    border-radius: 15px;
-    margin-left: 275px;
-    margin-top: 48px ;
+.message{
+  border-radius: 15px;
+  margin-left: 275px;
+  margin-top: 15px ;
 }
-.message-sent p, .message-received p{
+
+.sent{
+  background-color: #D5F9BA ;
+}
+.sent p, .received p{
   font-size: 17px;
   padding: 15px;
   line-height: 20px;
 }
 
-.message-received{
+.received{
   max-width: 55%;
-  min-height: 130px ;
   background-color: #fff ;
   border-radius: 15px;
-  margin-left: 35px;
-  margin-top: 10px;
+  margin-left: 25px;
+  margin-top: 15px;
 }
 
 /* input scrivi un messaggio */

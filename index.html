@@ -90,11 +90,11 @@
           <div class="contatto d-flex">
 
             <div class="photo-michele">
-              <img id="me" src="img/avatar_1.jpg" alt="avatar-io">
+              <img id="me" :src="contacts[utenteAttivo].avatar" alt="avatar-io">
             </div>
 
             <div class="name-user-michele">
-              <p><strong>Michele</strong></p>
+              <p><strong>{{contacts[utenteAttivo].name}}</strong></p>
               <p id="font-xs">Ultimo accesso oggi alle 16:26</p>
             </div>
           </div>
@@ -102,19 +102,16 @@
   <!-- messaggi CHAT GRANDE -->
         <div class="content-messages">
 
-        
           <div 
           v-for="message in contacts[utenteAttivo].messages"
-          class="message-sent"
+          class="message sent"
           >
-            <p>{{ contacts[utenteAttivo].messages[0].message }}</p>
-
+            <p>{{ message.message }}</p>
           </div>
 
-
-          <!-- <div class="message-received">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cumque voluptatibus expedita ratione officiis deleniti quasi eius veniam veritatis voluptate! Nihil cupiditate molestias nobis quidem excepturi </p>
-          </div> -->
+          <div class="message received">
+            <p>Lorem ipsum dolor si</p>
+          </div>
 
         </div>
 

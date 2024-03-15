@@ -174,13 +174,13 @@ createApp({
                 }
             ],
         }
-      ],
+    ],
     
       // 0 è il primo indice della prima chat
-      utenteAttivo:0,
+        utenteAttivo:0,
 
     }
-  },
+    },
 
   // Impostare l'indice del contatto selezionato
   methods:{
