@@ -69,6 +69,7 @@
           :class="{'active':index === utenteAttivo}"
           @click="attivareUtente(index)"
           >
+          <!-- con :class="{'active':index === utenteAttivo}" rendo attiva (e dinamica grazie al v-bind) la classe active  -->
             <div class="photo">
               <img 
               :src="contact.avatar" alt="avatar"
@@ -105,16 +106,17 @@
 
           <div 
           v-for="message in contacts[utenteAttivo].messages"
-          class="message sent"
+          class="message "
+          :class="message.status"
           >
             <p>{{ message.message }}</p>
-            <p class="message-time" >00/00/00 00:00:00</p>
+            <p class="message-time" >{{ message.date }}</p>
           </div>
 
-          <div class="message received">
+          <!-- <div class="message received">
             <p>Lorem ipsum dolor si</p>
             <p class="message-time" >00/00/00 00:00:00</p>
-          </div>
+          </div> -->
 
         </div>
 
