@@ -238,6 +238,19 @@ aside .users{
   margin-top: 15px ;
 }
 
+.sent .message-time{
+  font-size: 12px;
+  text-align: right;
+  color: grey;
+}
+
+.received .message-time{
+  font-size: 12px;
+  text-align: right;
+  color: grey;
+}
+
+
 .sent{
   background-color: #D5F9BA ;
 }

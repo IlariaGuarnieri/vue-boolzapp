@@ -1,34 +1,32 @@
-const {createApp} =Vue
+const { createApp } = Vue;
 
 createApp({
   data() {
     return {
-      // array oggetti
       contacts: [
         {
-            name: 'Michele',
-            avatar: 'img/avatar_1.jpg',
-            visible: true,
-
-            messages: [
-                {
-                    date: '10/01/2020 15:30:55',
-                    message: 'Hai portato a spasso il cane?',
-                    status: 'sent'
-                },
-                {
-                    date: '10/01/2020 15:50:00',
-                    message: 'Ricordati di stendere i panni',
-                    status: 'sent'
-                },
-                {
-                    date: '10/01/2020 16:15:22',
-                    message: 'Tutto fatto!',
-                    status: 'received'
-                }
-            ],
+          name: 'Michele',
+          avatar: 'img/avatar_1.jpg',
+          visible: true,
+          messages: [
+            {
+              date: '10/01/2020 15:30:55',
+              message: 'Hai portato a spasso il cane?',
+              status: 'sent'
+            },
+            {
+              date: '10/01/2020 15:50:00',
+              message: 'Ricordati di stendere i panni',
+              status: 'sent'
+            },
+            {
+              date: '10/01/2020 16:15:22',
+              message: 'Tutto fatto!',
+              status: 'received'
+            }
+          ]
         },
-
+        
         {
             name: 'Fabio',
             avatar: 'img/avatar_2.jpg',
@@ -51,7 +49,6 @@ createApp({
                 }
             ],
         },
-
         {
             name: 'Samuele',
             avatar: 'img/avatar_3.jpg',
@@ -74,7 +71,6 @@ createApp({
                 }
             ],
         },
-
         {
             name: 'Alessandro B.',
             avatar: './img/avatar_4.jpg',
@@ -92,7 +88,6 @@ createApp({
                 }
             ],
         },
-
         {
             name: 'Alessandro L.',
             avatar: './img/avatar_5.jpg',
@@ -110,7 +105,6 @@ createApp({
                 }
             ],
         },
-
         {
             name: 'Claudia',
             avatar: './img/avatar_6.jpg',
@@ -133,7 +127,6 @@ createApp({
                 }
             ],
         },
-
         {
             name: 'Federico',
             avatar: './img/avatar_7.jpg',
@@ -151,7 +144,6 @@ createApp({
                 }
             ],
         },
-
         {
             name: 'Davide',
             avatar: './img/avatar_8.jpg',
@@ -173,25 +165,42 @@ createApp({
                     status: 'received'
                 }
             ],
-        }
+        },
+        // Aggiungi gli altri contatti qui
     ],
-      // 0 è il primo indice della prima chat
-        utenteAttivo:0,
+    utenteAttivo: 0,
+    newMessageText: '',
+    input:'',
+    indice: 0
+    };
+},
+methods: {
+    attivareUtente(index) {
+    this.utenteAttivo = index;
+    },
+    inviaMessaggio() {
+    if (this.newMessageText.trim() !== '') {
+        const dataAttuale= luxon.DateTime.local().toFormat('dd/MM/yyyy HH:mm:ss');
+
+        // Aggiunta del nuovo messaggio inviato
+        this.contacts[this.utenteAttivo].messages.push({
+        date: dataAttuale,
+        message: this.newMessageText,
+        status: 'sent',
+        });
+
+        // Resetta l'imput dopo invio messaggio
+        this.newMessageText = '';
+
+        // risposta automatica "Ok!" dopo un secondo
+        setTimeout(() => {
+        this.contacts[this.utenteAttivo].messages.push({
+            date: dataAttuale,
+            message: 'Ok!',
+            status: 'received',
+        });
+        }, 1000);
     }
     },
-
-  // Impostare l'indice del contatto selezionato
-  methods:{
-  attivareUtente(index){
-    this.utenteAttivo = index;
-    console.log('cliccato')
-  },
 },
-
-computed:{
-
-}
-
-}).mount('#app')
-
-
+}).mount('#app');
