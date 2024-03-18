@@ -166,7 +166,6 @@ createApp({
                 }
             ],
         },
-        // Aggiungi gli altri contatti qui
     ],
     utenteAttivo: 0,
     newMessageText: '',
@@ -193,6 +192,7 @@ methods: {
         this.newMessageText = '';
 
         // risposta automatica "Ok!" dopo un secondo
+        // lo aggiunge all'oggetto oggetto this.contacts[this.utenteAttivo].messages
         setTimeout(() => {
         this.contacts[this.utenteAttivo].messages.push({
             date: dataAttuale,
@@ -203,4 +203,5 @@ methods: {
     }
     },
 },
+
 }).mount('#app');
